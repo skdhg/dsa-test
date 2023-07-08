@@ -14,7 +14,8 @@ def precedence(op)
     end
 end
 
-def to_postfix(expr)
+def to_prefix(src)
+    expr = src.reverse
     num_chars = expr.length
     postfix = ""
     count = 0
@@ -56,7 +57,7 @@ def to_postfix(expr)
         end
     end
 
-    puts "Infix: #{expr} -> Postfix: #{postfix}"
+    puts "Infix: #{src} -> Postfix: #{postfix.reverse}"
 end
 
 # main
@@ -66,4 +67,4 @@ expression = gets.chomp
 
 puts "\n"
 
-to_postfix expression
+to_prefix expression
