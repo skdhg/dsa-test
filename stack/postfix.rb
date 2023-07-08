@@ -59,6 +59,7 @@ def to_postfix(expr)
     puts postfix
 end
 
+# main
 print "Write an infix expression: "
 
 expression = gets.chomp
